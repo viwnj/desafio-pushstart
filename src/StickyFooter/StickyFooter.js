@@ -2,6 +2,7 @@ import React from 'react';
 import './stickyfooter.css';
 import { Link } from 'react-router-dom';
 
+//Apenas visível em mobile
 export function StickyFooter(props){
 	return(
 		<footer className='footer navbar navbar-dark bg-custom'>

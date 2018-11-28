@@ -27,7 +27,7 @@ class SignIn extends React.Component{
 		const { dispatch } = this.props; // destruturar a função dispatch (recebida através de props pelo connect)
 		if(username && password){
 			// se um username e um password forem providenciados, dispatche a ação de login e tente fazer o login
-			dispatch(userActions.login(username, password)); // tente fazer o login com o username e password providenciados pelo usuario	
+			dispatch(userActions.login(username, password));
 		}
 	}
 	render(){

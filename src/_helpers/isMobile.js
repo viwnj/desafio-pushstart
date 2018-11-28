@@ -1,3 +1,6 @@
+/*
+	Função que checa se o site está sendo visualizado de um aparelho móvel.
+*/
 export function isMobile() {
 	let check = false;
 	// eslint-disable-next-line

@@ -17,19 +17,16 @@ class FeedbackPage extends React.Component{
             submitted:false,
         }
     }
+
     handleChange = (e) =>{
         const { name, value} = e.target;
         this.setState({[name]:value})
     }
-    handleMessage = (e) =>{
-        const { value } = e.target;
-        this.setState({
-            message:value,
-        })
-    }
+
     sendFeedback =(e) => {
-        const { name, email, message } = this.state;
         e.preventDefault();
+        const { name, email, message } = this.state;
+        
         if(name && emailValidator(email) && message.length >= 10){
             this.setState({
                 submittedWithErrors:false,
@@ -40,6 +37,7 @@ class FeedbackPage extends React.Component{
             })
             this.props.dispatch(feedbackActions.sendFeedback(name,email,message))
         }
+
         else{
             this.setState({submittedWithErrors:true})
         }
@@ -91,7 +89,7 @@ class FeedbackPage extends React.Component{
                                     onChange={this.handleChange} 
                                     value={this.state.name}
                                     required
-                                    autofocus
+                                    autoFocus
                                     />
                                 {
                                     submittedWithErrors && !name && 
@@ -99,7 +97,16 @@ class FeedbackPage extends React.Component{
                                 }
                             </div>
                             <div className='form-group'>
-                                <input type="email" name="email" className ="form-control" placeholder="Seu Email *" onChange={this.handleChange} value={this.state.email}/>
+                                <input
+                                     type="email" 
+                                     name="email" 
+                                     className ="form-control" 
+                                     placeholder="Seu Email *" 
+                                     onChange={this.handleChange} 
+                                     value={this.state.email}
+                                     required
+                                     autoFocus
+                                     />
                                 {   submittedWithErrors && !emailValidator(email) && 
                                         <div className='help-block text-danger'>*Um email valido é necessário</div>
                                 }   
@@ -117,11 +124,25 @@ class FeedbackPage extends React.Component{
                             }                       
                          </div>
                         <div className='col-md-6 mt-4 pt-2'>
-                            <textarea type='text' name="message" className ="form-control" placeholder="Sua mensagem *" style={{width:'100%', minHeight:'40vh', maxHeight:'50vh'}} onChange={this.handleMessage} value={this.state.message}></textarea>
+                            <textarea 
+                                type='text' 
+                                name="message" 
+                                className ="form-control" 
+                                placeholder="Sua mensagem *" 
+                                style={{width:'100%', minHeight:'40vh', maxHeight:'50vh'}} 
+                                onChange={this.handleChange} 
+                                value={this.state.message}
+                                required
+                                autoFocus
+                                >
+                            </textarea>
+
                             <div className='text-muted font-weight-light ml-2'>Escreva pelo menos {this.state.charactersLeft} caracteres</div>
+                            
                             {  submittedWithErrors && message.length < 10 && 
                                 <div className='help-block text-danger'>*Uma mensagem de pelo menos 10 caracteres é necessária</div>
                             }
+
                             {
                                 isMobile() &&                             
                                 <div className ="form-group">
