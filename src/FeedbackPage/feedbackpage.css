@@ -1,0 +1,23 @@
+.feedback-page{
+    height: 100vh;
+}
+
+.feedback-page > .feedback-page-header{
+    height: 8%;
+    background-color: blue;
+}
+
+.feedback-page > .feedback-page-body{
+    width: 100%;   
+    height: 80%;
+    /*background-color: blue;*/
+}
+.feedback-page > .feedback-page-body > .form-group{
+    width: 100%;
+    /*background-color: blue;*/
+}
+
+.button{
+    margin-top:5.1em;
+    /*background-color: blue;*/
+}
