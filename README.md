@@ -14,7 +14,7 @@
 * **react-redux/redux**: Usado principalmente para _state management_ e controle do fluxo de dados dentro da aplicação.
 * **redux-thunk**: Necessário para termos _async actions_ sendo dispachadas no Redux Store.
 * **redux-logger(devDependencies)**:Util para termos controle (através do console) das actions & states que estão sendo desencadeadas.
-**react-dom-router**: Gerenciamento de rotas.
+* **react-dom-router**: Gerenciamento de rotas.
 
 ## Estrutura do Projeto
 Todo o código fonte do projeto pode ser encontrado dentro da pasta `src` que, por sua vez, é composta por diversas sub-pastas App, Timeline, FeedbackPage, etc. Eu adicionei um **underscore** nas pastas que não incluem features para o aplicativo (e.g: _helpers, _actions, _services). Isso faz com que elas fiquem organizadas ao topo do projeto, proporcionando uma navegação amigável dentro dos diretórios.
