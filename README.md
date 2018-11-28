@@ -28,7 +28,9 @@ Toda pasta contém um arquivo nomeado `index.js` que exporta todos os módulos d
 
 * **_helpers**: O diretório _helpers contém diversas funções que não se encaixam nas outras pastas mas que ajudam a desempenhar algumas taréfas no código da aplicação.
 
-* **reducers**: O diretório _reducers contém todos os reducers do projeto. Cada reducer age em torno das _actions_ dispachadas dentro do _store_ e retorna um _state_ para cada caso.
+* **_reducers**: O diretório _reducers contém todos os reducers do projeto. Cada reducer age em torno das _actions_ dispachadas dentro do _store_ e retorna um _state_ para cada caso.
+
+* **_services**: A layer de serviços contém todos os serviços principalmente relacionados à chamadas a API e comunicação com backend em geral. Exporta vários metódos para perfomar diversas operações.
 
 * **App**: Container principal que abriga todos os outros sub-containers no projeto.
 
