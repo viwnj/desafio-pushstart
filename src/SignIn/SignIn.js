@@ -56,7 +56,7 @@ class SignIn extends React.Component{
 					      	value={this.state.username}
 					      	onChange={this.handleLoginInputs}
 					      	required 
-					      	autofocus />
+					      	autoFocus />
 					      	{ submitted && ! username && 
 					      		<div className='help-block text-danger'>O nome de usuário é necessário</div>
 					      	}
