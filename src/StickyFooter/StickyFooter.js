@@ -11,9 +11,12 @@ export function StickyFooter(props){
 				  <Link to='/feedback'>
 				  	<i class="far fa-comment-alt font-weight-light text-white"></i>
 				  </Link>
-				  <span class="list-inline-item">
+				  <a class="list-inline-item" 
+		  		 	href='https://twitter.com/intent/tweet?text=Estou usando a melhor rede social já lançada!&hashtags=pushstart'				  	 
+				  	target='_blank' 
+				  	rel='noopener noreferrer'>
 				  	<i class="fas fa-user-plus mr-2 text-white"></i>
-				  </span>
+				  </a>
 				  <span class='list-inline-item' onClick={props.logout}>
 				  	<i  class="fas fa-sign-out-alt mr-2 text-white"></i>
 				  </span>
